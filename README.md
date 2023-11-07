@@ -13,6 +13,9 @@ As an aspiring data analyst, this project serves as a hands-on opportunity to ap
             limit 1
 
 ```
+## Result
+![Q1_RESULT](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/deace825-94f1-491e-9aa1-7ca160224ccf)
+
 ### Q2 Which countries have the most Invoices?
 
 ```sql
@@ -22,6 +25,9 @@ GROUP BY billing_country
 ORDER BY c desc
 
 ```
+## Result
+![Q2_RESULT](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/7587c0c5-4c0d-4187-9d59-54471ece98f0)
+
 ### Q3 What are the top 3 values of total invoice?
 ```sql
 SELECT total FROM invoice
@@ -29,6 +35,9 @@ ORDER BY total desc
 limit 3
 
 ```
+## Result
+![Q3_RESULT](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/4fb14240-be63-440f-9a6e-b2d765776176)
+
 ### Q4 Which city has the best customers? We would like to throw a promotional music festival in the city where we made the most money. Write a query that returns one city that has the highest sum of invoice totals. Return both the city name & sum of all invoice totals ?
 ```sql
 SELECT SUM(total) as invoice_total, billing_city
@@ -37,6 +46,9 @@ group by billing_city
 order by invoice_total desc
 
 ```
+## Result
+![Q4_RESULT](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/c29dcd61-4013-49bb-b0c6-d04e40289925)
+
 ### Q5 Who is the best customer? The customer who has spent the most money will be declared the best customer. Write a query that returns the person who has spent the most money?
 
 ```sql
@@ -48,6 +60,9 @@ ORDER BY total DESC
 limit 1
 
 ```
+## Result
+![Q5_RESULT](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/78c28ef3-3b98-486f-9e58-b887db7ada72)
+
 ###### Moderate Questions
 ### Q6 Write a query to return the email, first name, last name, & Genre of all Rock Music listeners. Return your list ordered alphabetically by email starting with A
 
@@ -76,6 +91,9 @@ WHERE genre.name LIKE 'Rock'
 ORDER BY email;
 
 ```
+## Result
+![Q6 Result](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/9555eb0b-c637-4dfe-a7d6-1dcb09a6ad73)
+
 ### Q7 Let’s invite the artist who has written the most rock music in our dataset. Write a query that returns the Artist name and total track count of the top 10 rock bands
 
 ```sql
@@ -90,6 +108,9 @@ ORDER BY number_of_songs DESC
 LIMIT 10;
 
 ```
+## Result
+![Q7 result](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/107a9f68-a8bd-467c-88ca-ecb98f448a36)
+
 ### Q8 Return all the track names that have a song length longer than the average song length. Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first.
 
 ```sql
@@ -102,6 +123,9 @@ WHERE milliseconds > (
 ORDER BY milliseconds DESC;
 
 ```
+## Result
+![Q8 result](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/854e9bd7-61d0-4381-a16a-38605fc8a107)
+
 ###### Advance Questions
 ### Q9 Find how much amount is spent by each customer on the artist? Write a query to return customer name, artist name and total spent.
 ```sql
@@ -128,6 +152,9 @@ GROUP BY 1,2,3,4
 ORDER BY 5 DESC;
 
 ```
+## Result
+![Q9 result](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/37905571-1f75-4d86-8ae3-b3d036056c59)
+
 ### Q10 We want to find out the most popular music Genre for each country. We determine the most popular genre as the genre with the highest amount  of purchases. Write a query that returns each country along with the top Genre. For countries where the maximum number of purchases is shared, return all Genres.
 
 #### Method -1
@@ -171,6 +198,9 @@ JOIN max_genre_per_country ON sales_per_country.country = max_genre_per_country.
 WHERE sales_per_country.purchases_per_genre = max_genre_per_country.max_genre_number
 
 ```
+## Result
+![Q10 result](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/3b6e7f30-b325-4dd7-b9ca-d4fa998734a6)
+
 ### Q11 Write a query that determines the customer that has spent the most on music for each country. Write a query that returns the country along with the top customer and how much they spent. For countries where the top amount spent is shared, provide all customers who spent this amount
 #### Method -1: Recursive Method
 ```sql
@@ -208,3 +238,6 @@ WITH customer_with_country AS (
 SELECT * FROM customer_with_country WHERE RowNo <= 1
 
 ```
+## Result
+![Q11 result](https://github.com/manishmehta-in/Digital-Music-Store-Analysis---SQL-Project/assets/140696340/f945206a-cbdb-4327-aff7-c584ae764ff3)
+
