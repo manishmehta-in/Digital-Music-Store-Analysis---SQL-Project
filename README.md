@@ -4,6 +4,19 @@
 
 As an aspiring data analyst, this project serves as a hands-on opportunity to apply and enhance my SQL skills while exploring a real-world dataset. The main objective is to delve into the digital music store's database and extract valuable insights through structured SQL queries. By addressing a set of progressively challenging questions, I aim to demonstrate my ability to manipulate data, draw meaningful conclusions, and communicate the results effectively. This project is a stepping stone in my journey towards a career in data analysis, allowing me to showcase my analytical capabilities and make a compelling case for potential employers.
 
+## Project Overview
+
+This project involves the analysis of a digital music store's database using SQL. By addressing a series of SQL queries, we will uncover interesting patterns and derive valuable insights from the dataset.
+The project is divided into three question sets, ranging from easy to advanced, each designed to test and improve SQL skills. The goal is not only to obtain the correct answers but also to develop an efficient, structured, and readable SQL code. The project helps demonstrate competence in SQL data analysis and problem-solving.
+
+## Project Structure
+
+- **SQLQueries:** This directory contains SQL queries used to answer the project questions. Each question set has a separate SQL file.
+
+## Project Results
+
+For the results of each question set, you can refer to the project's SQL queries and their respective output, which provides the insights and answers derived from the dataset.
+
 ###### Easy Questions
 
 ### Q1 Who is the senior most employee based on job title?
